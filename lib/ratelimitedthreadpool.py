@@ -179,7 +179,7 @@ class RateLimitedThreadPool(object):
     def _maybe_add_thread(self):
         if self.ratelimiter.finished:
             return
-        if self._maxsize != 0 and len(threads) >= self._maxsize:
+        if self._maxsize != 0 and len(self._threads) >= self._maxsize:
             return
         if self.ratelimiter.can_make_request():
             thread = self._create_thread()

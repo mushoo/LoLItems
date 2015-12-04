@@ -1,5 +1,7 @@
+request_data
 api_key
 *.pyc
+*.log
 
 # Windows image file caches
 Thumbs.db
